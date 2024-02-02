@@ -26,17 +26,16 @@ def solution(input_string):
 import collections
 def solution(input_string):
     answer = ''
-    sH = collections.defaultdict(int)
+    sH = collections.defaultdict(int) # 빈 딕셔너리 생성(문자와 등장 횟수 기록)
     prev = None
     for cur in input_string:
-        if cur != prev:
-            sH[cur] += 1
+        if cur != prev: # 현재 문자가 직전 문자와 같은지 확인
+            sH[cur] += 1 # 다를 경우에만 딕셔너리에 추가, 해당 문자 횟수 1로 초기화
         prev = cur
-    for [key, val] in sH.items():
+    for [key, val] in sH.items(): # 등장 횟수 2 이상인 문자들 answer에 추가
         if val >= 2:
             answer += key
-    if len(answer) == 0:
+    if len(answer) == 0: # 비어있다면
         return "N"
     
     return ''.join(sorted(answer))
-
