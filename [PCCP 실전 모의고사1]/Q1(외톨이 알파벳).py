@@ -1,5 +1,4 @@
 # 방법 1
-# 방법 1
 def solution(input_string):
     answer = ''
 
