@@ -1,3 +1,4 @@
+# 방법 1
 def solution(input_string):
     answer = ''
 
@@ -20,3 +21,22 @@ def solution(input_string):
         answer += 'N'
 
     return answer
+
+# 방법 2 
+import collections
+def solution(input_string):
+    answer = ''
+    sH = collections.defaultdict(int)
+    prev = None
+    for cur in input_string:
+        if cur != prev:
+            sH[cur] += 1
+        prev = cur
+    for [key, val] in sH.items():
+        if val >= 2:
+            answer += key
+    if len(answer) == 0:
+        return "N"
+    
+    return ''.join(sorted(answer))
+
