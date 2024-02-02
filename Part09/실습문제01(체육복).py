@@ -15,8 +15,10 @@ def solution(n, lost, reserve):
 # 방법 2
 def solution(n, lost, reserve):
     s = set(lost) & set(reserve) # 가져왔는데 잃어버린
-    l = set(lost) - s
-    r = set(reserve) - s
+    l = set(lost) - s # 잃어버린 애 중 체육복 없는 학생 집합
+    r = set(reserve) - s # 체육복 있는 학생 중 도난 X 학생
+
+    # 앞뒤로 체육복 없는 학생에게 빌려줌
     for x in sorted(r):
         if x - l in l:
             l.remove(x - 1)
