@@ -1,4 +1,5 @@
 # 방법 1
+# 방법 1
 def solution(input_string):
     answer = ''
 
@@ -10,15 +11,15 @@ def solution(input_string):
     ans = set(str_list) # 중복 제거 위해 set 자료형으로 변환
     ans = sorted(ans) # 알파벳 순으로 정렬
 
-    for i in ans:
+    for i in ans: # 정렬된 문자 순회
         cnt = 0
         for j in str_list:
             if i==j:
                 cnt += 1
         if cnt > 1:
-            answer += i
-    if answer == '':
-        answer += 'N'
+            answer += i # 중복된 문자 answer에 추가
+    if answer == '': # 중복된 문자 없다면
+        answer += 'N' # N을 answer에 추가
 
     return answer
 
