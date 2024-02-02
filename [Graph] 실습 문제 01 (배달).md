@@ -28,4 +28,5 @@ N	road	K	result
 입출력 예 #2
 주어진 마을과 도로의 모양은 아래 그림과 같습니다.
 ![image](https://github.com/20210805jiwoo/Programmers/assets/102974424/c72936f8-b21e-4816-aaf2-64497fee5ac8)
+
 1번 마을에서 배달에 4시간 이하가 걸리는 마을은 [1, 2, 3, 5] 4개이므로 4를 return 합니다.
